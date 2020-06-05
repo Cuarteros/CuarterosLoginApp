@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+
+    <div class="modal-dialog text-center">
+        <div class="col-sm-9 main-section">
+            <div class="modal-content">
+
+                <!--For the admin image-->
+                <div class="col-12 user-img">
+                    <img src="admin.png" >
+                </div>
+
+                <div> <!--if the user is ADMIN, | It works |  will display here-->
+                    <h2 id="ADM" class="text-white text-center"></h2>
+                </div>
+
+                <div class="col-12 form-input">
+                    <!--The form -->
+                    <form  id="form"  aria-required="true" method="get">
+                        <!--input field of Username and Password (encrypt)-->
+                        <div class="form-group">
+                            <input id="username"  type="text" class="form-control" placeholder="Enter Username" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="password"  type="password" class="form-control" placeholder="Enter Password" required>
+                        </div>
+
+                        <div><!--if the user is USER, | It works | will display here-->
+                            <h2 id="USR" class="text-white text-center"></h2>
+                        </div>
+
+                        <!-- (left side ) Reset button      Login button (right side)      -->
+
+                        <!-- REMEMBER: use  "button" as type, do not use "submit", because it will only BLINK!
+                            The "IT WORKS text will not display which is our main goal!"-->
+                        
+                        <button type="button" onclick="form.reset();"class="btn btn-danger">Reset</button>
+                        <button type="button" onclick="validation()" class="btn btn-success ">Login</button>
+                        
+
+                     </form>
+
+                 </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!--Always include this, it is needed!-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
